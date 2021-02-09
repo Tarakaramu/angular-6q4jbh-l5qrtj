@@ -1,16 +1,16 @@
 <h2>Products List</h2>
 <div style ="background-color:silver" 
-*ngFor="let product of products">
+*ngFor="let productOuter of products">
 <!-- ID : {{product.id}} <br/> -->
 
 <!-- Property Binding -->
-<a [title]="product.name + ' model'">
-  {{ product.name }}
+<a [title]="productOuter.name + ' model'">
+  {{ productOuter.name }}
 </a>
 <br/>
 
-<p *ngIf="product.description">
-  Description: {{ product.description }}
+<p *ngIf="productOuter.description">
+  Description: {{productOuter.description }}
 </p>
 <br/> 
 <!-- Price : {{product.price}} <br/> -->
@@ -21,7 +21,11 @@
     Share product
   </button>
 
+<!-- TheAngularselector -->
+<app-product-alerts [productInner] = "productOuter">
+  </app-product-alerts>
 </div>
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
