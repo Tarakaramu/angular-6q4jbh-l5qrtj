@@ -4,7 +4,8 @@
 <!-- ID : {{product.id}} <br/> -->
 
 <!-- Property Binding -->
-<a [title]="productOuter.name + ' model'">
+<a [title]="productOuter.name + ' model'"
+[routerLink]="['/products', productOuter.id]">
   {{ productOuter.name }}
 </a>
 <br/>
