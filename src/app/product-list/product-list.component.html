@@ -1,0 +1,30 @@
+<h2>Products List</h2>
+<div style ="background-color:silver" 
+*ngFor="let product of products">
+<!-- ID : {{product.id}} <br/> -->
+
+<!-- Property Binding -->
+<a [title]="product.name + ' model'">
+  {{ product.name }}
+</a>
+<br/>
+
+<p *ngIf="product.description">
+  Description: {{ product.description }}
+</p>
+<br/> 
+<!-- Price : {{product.price}} <br/> -->
+<hr/>
+
+<!-- Event binding -->
+ <button (click)="share()">
+    Share product
+  </button>
+
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
