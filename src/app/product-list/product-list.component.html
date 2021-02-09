@@ -22,7 +22,9 @@
   </button>
 
 <!-- TheAngularselector -->
-<app-product-alerts [productInner] = "productOuter">
+<app-product-alerts 
+[productInner] = "productOuter"
+(notify)="onNotify()">
   </app-product-alerts>
 </div>
 
