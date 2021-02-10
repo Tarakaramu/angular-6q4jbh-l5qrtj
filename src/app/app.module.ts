@@ -9,14 +9,22 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartService } from './cart.service';
+import { CartComponent } from './cart/cart.component';
+import { MyTopBarComponent } from './my-top-bar/my-top-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    // My appModule nedds to use another module httpclients module
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+       { path: 'cart', component: CartComponent },
+       {path: 'shipping',component: ShippingComponent }
 
     ])
   ],
@@ -25,7 +33,11 @@ import { CartService } from './cart.service';
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    MyTopBarComponent,
+    MyTopBarComponent,
+    ShippingComponent
   ],
   bootstrap: [
     AppComponent
