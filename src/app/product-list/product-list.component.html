@@ -13,6 +13,7 @@
 <p *ngIf="productOuter.description">
   Description: {{productOuter.description }}
 </p>
+
 <br/> 
 <!-- Price : {{product.price}} <br/> -->
 <hr/>
@@ -22,7 +23,7 @@
     Share product
   </button>
 
-<!-- TheAngularselector -->
+<!-- TheAngular selector -->
 <app-product-alerts 
 [productInner] = "productOuter"
 (notify)="onNotify()">
