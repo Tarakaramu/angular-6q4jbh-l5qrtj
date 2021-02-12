@@ -8,6 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+//platform Browser used to run it on the Browser
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 

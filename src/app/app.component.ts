@@ -1,7 +1,11 @@
+// insert {class/interface} from "module"
 import { Component } from '@angular/core';
 
+
+// logic for the component
 @Component({
   selector: 'app-root',
+  // all Html elements representing the UI
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

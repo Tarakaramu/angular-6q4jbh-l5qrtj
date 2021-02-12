@@ -13,13 +13,19 @@ import { CartComponent } from './cart/cart.component';
 import { MyTopBarComponent } from './my-top-bar/my-top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
-
+//@ngmodule  decorator helps to create a method
 @NgModule({
+  //the import array
+  //importing other modules
   imports: [
+    //providing browser pltform support
     BrowserModule,
+    //Support reactive form,(alternate -template driven forms)
     ReactiveFormsModule,
     // My appModule nedds to use another module httpclients module
+    //Access restful services
     HttpClientModule,
+    //configuring paths and components
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
@@ -29,6 +35,7 @@ import { ShippingComponent } from './shipping/shipping.component';
     ])
   ],
   declarations: [
+    // These components belongs to this module(app.moduel)
     AppComponent,
     TopBarComponent,
     ProductListComponent,
@@ -40,6 +47,7 @@ import { ShippingComponent } from './shipping/shipping.component';
     ShippingComponent
   ],
   bootstrap: [
+    //The intial compenent that gets loaded(its like PSV main in jav)
     AppComponent
   ],
   providers: [CartService]
