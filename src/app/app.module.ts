@@ -1,3 +1,4 @@
+//import modules can be used to imort modules,servies and components
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -27,7 +28,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     HttpClientModule,
     //configuring paths and components
     RouterModule.forRoot([
+      // if no url .router navigates to product list components
       { path: '', component: ProductListComponent },
+      // :productId is the routeparam
       { path: 'products/:productId', component: ProductDetailsComponent },
        { path: 'cart', component: CartComponent },
        {path: 'shipping',component: ShippingComponent }
@@ -50,8 +53,10 @@ import { ShippingComponent } from './shipping/shipping.component';
     //The intial compenent that gets loaded(its like PSV main in jav)
     AppComponent
   ],
+  //These below services are used in this module
   providers: [CartService]
 })
+//export makes the Appmodule accessable outside this file(module)
 export class AppModule { }
 
 
